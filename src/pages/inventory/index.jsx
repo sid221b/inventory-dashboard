@@ -16,7 +16,7 @@ const Inventory = () => {
   return (
     <main>
       <Navbar />
-      <h1>Inventory</h1>
+      <h1>Inventory stats</h1>
       <WidgetSection />
       <ProductTable />
       <ItemModal />
