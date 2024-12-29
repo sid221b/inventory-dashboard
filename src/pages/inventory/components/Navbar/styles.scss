@@ -1,0 +1,57 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 0;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 18px;
+    gap: 4px;
+    #check {
+      appearance: none;
+      position: relative;
+      &::before {
+        position: absolute;
+        transform: translateY(-25%);
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #e6caca;
+        transition: background-color 0.25s;
+      }
+      &::after {
+        content: '';
+        display: block;
+        height: 8px;
+        width: 32px;
+        border-radius: 4px;
+        background-color: #af9696;
+        transition: background-color 0.25s;
+      }
+      &:checked {
+        &::before {
+          right: 0;
+          background-color: #aec151;
+        }
+        &::after {
+          background-color: #dedfe9;
+        }
+      }
+    }
+  }
+  &_right {
+    display: flex;
+    align-items: center;
+    img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.8;
+    }
+  }
+}
