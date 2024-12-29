@@ -5,6 +5,7 @@ import { closeModal } from './itemModalSlice'
 import { editItem } from '../../inventorySlice'
 
 import './styles.scss'
+import Close from 'root/assets/svgComponent/Close'
 
 const ItemModal = React.memo(() => {
   const dispatch = useDispatch()
@@ -46,6 +47,9 @@ const ItemModal = React.memo(() => {
   return (
     <div className='item-modal'>
       <form>
+        <button onClick={onCancel} className='close-btn'>
+          <Close color='#deff55' size={20} />
+        </button>
         <h2>Edit Product</h2>
         <h3>{selectedItem.name}</h3>
         <p>{selectedItem.description}</p>
