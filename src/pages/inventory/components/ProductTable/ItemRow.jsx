@@ -33,19 +33,21 @@ const ItemRow = React.memo(({ item }) => {
       <td>{quantity}</td>
       <td>${value}</td>
       <td className='actions'>
-        <button disabled={isUserType || isDisabled} onClick={onEditClick}>
-          <Edit size={16} color='green' />
-        </button>
-        <button disabled={isUserType} onClick={onDisableClick}>
-          {!isDisabled ? (
-            <Eye size={16} color='skyblue' />
-          ) : (
-            <EyeClosed size={16} color='skyblue' />
-          )}
-        </button>
-        <button disabled={isUserType || isDisabled} onClick={deleteItem}>
-          <Delete size={16} color='red' />
-        </button>
+        <div>
+          <button disabled={isUserType || isDisabled} onClick={onEditClick}>
+            <Edit size={16} color='green' />
+          </button>
+          <button disabled={isUserType} onClick={onDisableClick}>
+            {!isDisabled ? (
+              <Eye size={16} color='skyblue' />
+            ) : (
+              <EyeClosed size={16} color='skyblue' />
+            )}
+          </button>
+          <button disabled={isUserType || isDisabled} onClick={deleteItem}>
+            <Delete size={16} color='red' />
+          </button>
+        </div>
       </td>
     </tr>
   )

@@ -32,6 +32,12 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  #root {
+    margin: 0 24px;
+  }
+}
+
 // @media (prefers-color-scheme: light) {
 //   :root {
 //     color: #213547;
